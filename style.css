@@ -27,6 +27,7 @@
     border-radius: 5px;
     user-select: none;
     transition: all 235ms ease-in-out;
+    margin-top: 5px;
 }
 
 .button-55:hover {
@@ -168,7 +169,6 @@ nav ul li a {
         margin-bottom: 6vh;
     }
 }
-
 
 
 
