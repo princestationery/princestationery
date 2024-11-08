@@ -1,12 +1,11 @@
 /* Full height container styles */
 .full-height-container {
     height: 100vh;
-    /* Full viewport height */
 }
 
 .full-height-column {
     height: 50vh;
-    /* 50% of viewport height on mobile */
+    /* 50% height on mobile */
 }
 
 .div1 {
@@ -19,26 +18,15 @@
 .button-55 {
     align-self: center;
     background-color: #fff;
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-    box-sizing: border-box;
     color: #41403e;
     cursor: pointer;
-    display: inline-block;
     font-family: Neucha, sans-serif;
     font-size: 1rem;
-    line-height: 23px;
-    outline: none;
     padding: .75rem;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
     border-radius: 5px;
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    transition: all 235ms ease-in-out;
 }
 
 .button-55:hover {
@@ -90,7 +78,6 @@ nav ul li a {
     gap: 5px;
     width: 25px;
     height: 20px;
-    justify-content: space-between;
 }
 
 .hamburger span {
@@ -129,11 +116,20 @@ nav ul li a {
         /* Prevent scrolling */
         box-sizing: border-box;
     }
+
+    /* Hide element on Windows */
+    .hide-on-windows {
+        display: block;
+    }
+
+    body[data-platform="windows"] .hide-on-windows {
+        display: none;
+    }
 }
+
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-
     .div1 {
         display: flex;
         align-items: center;
@@ -167,7 +163,8 @@ nav ul li a {
     nav.active ul {
         display: flex;
     }
-    
-    h1{
-    margin-bottom: 6vh;}
+
+    h1 {
+        margin-bottom: 6vh;
+    }
 }
