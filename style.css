@@ -168,3 +168,66 @@ nav ul li a {
         margin-bottom: 6vh;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+.icon {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.5;
+    animation: float 60s infinite linear, rotate-clockwise 15s infinite linear;
+    filter: blur(2px);
+  }
+  
+  /* Floating animation covering 100vw and 100vh in multiple directions */
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(80vw, -50vh); /* Move diagonally up-right */
+    }
+    40% {
+      transform: translate(-70vw, 60vh); /* Move diagonally down-left */
+    }
+    60% {
+      transform: translate(60vw, 70vh); /* Move diagonally down-right */
+    }
+    80% {
+      transform: translate(-80vw, -60vh); /* Move diagonally up-left */
+    }
+    100% {
+      transform: translate(0, 0); /* Return to start */
+    }
+  }
+  
+  /* Clockwise rotation */
+  @keyframes rotate-clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Counterclockwise rotation */
+  @keyframes rotate-counterclockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  

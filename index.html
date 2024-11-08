@@ -51,6 +51,18 @@
         </div>
       </div>
       
+
+
+
+
+
+      <div class="icon">🖊️</div>
+      <div class="icon">📖</div>
+      <div class="icon">✏️</div>
+      <div class="icon">🖊️</div>
+      <div class="icon">📖</div>
+      <div class="icon">✏️</div>
+
       
 
 
@@ -87,6 +99,41 @@
   if (navigator.platform.indexOf('Win') !== -1) {
     document.body.setAttribute('data-platform', 'windows');
   }
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const icons = document.querySelectorAll(".icon");
+
+  icons.forEach(icon => {
+    // Randomize initial position
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    icon.style.left = `${xPos}vw`;
+    icon.style.top = `${yPos}vh`;
+
+    // Randomize blur level
+    const blurValue = .5 + Math.random() * 3; // Up to 4px blur
+    icon.style.filter = `blur(${blurValue}px)`;
+
+    // Randomize floating and rotation speed
+    const floatDuration = 30 + Math.random() * 30; // Between 30s and 60s
+    const rotationDuration = 10 + Math.random() * 10; // Between 10s and 20s
+
+    icon.style.animationDuration = `${floatDuration}s, ${rotationDuration}s`;
+
+    // Randomize rotation direction
+    const isClockwise = Math.random() > 0.5;
+    icon.style.animationName = `float, ${isClockwise ? 'rotate-clockwise' : 'rotate-counterclockwise'}`;
+  });
+});
+
+
+
+
 
 
     </script>
